@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{DB1CCF67-1D27-2EBC-CE93-D0D4F5991568}|">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/exit_game.cs">
+    <Files>
+      <File FileName="Assets/scripts/exit_game.cs" Line="10" Column="9" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="campusclimb" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="scripts" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c6933976-f86a-4722-ac1c-1a4e1720edad" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+</Properties>
