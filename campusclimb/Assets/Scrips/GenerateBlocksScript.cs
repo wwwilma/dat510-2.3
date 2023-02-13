@@ -18,35 +18,46 @@ public class GenerateBlocksScript : MonoBehaviour
     private int camZPos = -50;
 
     private float addRemoveRate = 0.5f;
+    private bool running = false;
 
     // Start is called before the first frame update
     public void Start()
     {
-        InvokeRepeating("generateBlocks", addRemoveRate, addRemoveRate);
+        //InvokeRepeating("generateBlocks", addRemoveRate, addRemoveRate);
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (running==false) 
-        //{
-        //    if (Input.GetKey(KeyCode.A))
-        //    {
-        //        Invoke("generateBlocks", 1.5f);
-        //    }
-        //}
+        
     }
 
-    private void generateBlocks()
-    {
 
-            if (counter < 20)
+    void FixedUpdate()
+    {
+        if (running == false)
+        {
+            if (Input.GetKey(KeyCode.A))
             {
+                Invoke("generateBlocks", 1.5f);
+            }
+        }
+    }
+
+    public void generateBlocks(GameObject platformA)
+    {
+            running= true;
+            while (counter < 20)
+            {
+            //String tag = PlatformA.GetTag("Test");
+            //if (tag == "Test") {
+            //    Debug.Log(tag);
+            //}
                 if (gameObjectList.Count < 4)
                 {
                     //Instantiate at position (0, 0, 0) and zero rotation.
-                    gameObjectList.Add(Instantiate(PlatformA, new Vector3(0, ((float)yPos), 0), Quaternion.identity));
+                    gameObjectList.Add(Instantiate(platformA, new Vector3(0, ((float)yPos), 0), Quaternion.identity));
                     MainCamera.transform.position = new Vector3(0, ((float)camYPos), camZPos);
                     yPos = yPos + 2;
                     camYPos = camYPos + 2;
@@ -58,6 +69,9 @@ public class GenerateBlocksScript : MonoBehaviour
                     gameObjectList.RemoveAt(0);
                 }
             }
+            running= false;
+            
+
         
 
     }
