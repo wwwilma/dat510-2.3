@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Platform
+public class Platform : MonoBehaviour
 {
     private GameObject Plat;
-    private List<GameObject> conPlat = new List<GameObject> ();
+    private List<GameObject> conPlat = new List<GameObject>();
 
 
     public Platform(GameObject p)
@@ -20,6 +20,6 @@ public class Platform
 
     public GameObject getRandomConPlat()
     {
-        return this.conPlat[Random.Range(0, this.conPlat.Count)];
+        return this.conPlat[(int)Random.Range(0, this.conPlat.Count)];
     }
 }
