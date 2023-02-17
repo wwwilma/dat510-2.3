@@ -1663,4 +1663,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07440c0ebcb024ea1903996e1ed6d3eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scoreText: {fileID: 0}
+  scoreText: {fileID: 370532362}
+  bestText: {fileID: 386914016}
+  scoreToAdd: 0
